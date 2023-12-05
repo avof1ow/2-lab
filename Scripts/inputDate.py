@@ -22,5 +22,4 @@ def main(year: int, month: int, day: int) -> tuple[str, int]:
 
 
 if __name__ == "__main__":
-    print(main
-(2022, 12, 27))
+    print(main(2022, 12, 27))
