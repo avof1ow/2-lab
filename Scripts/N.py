@@ -1,13 +1,13 @@
 import pandas as pd
 
 
-def main() -> None:
+def N(path: str) -> None:
     """_summary_
     Сперва выбираются все даты из таблицы,
     после чего таблица делится на новые таблицы,
     отсортированные по году
     """
-    df = pd.read_csv("CSV/dollar_course.csv", usecols=["rouble", "date"])
+    df = pd.read_csv(path, usecols=["rouble", "date"])
     year_set = set(year[:4] for year in df["date"])
 
     for year in year_set:
@@ -19,4 +19,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    N("CSV/dollar_course.csv")
